@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Tahoma", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 2rem;
+  gap: 1rem;
+  background-color: coral;
+}
+
+input{
+    padding: .5rem;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    padding: .5rem;
+    font-size: 1.1rem;
+    background-color: steelblue;
+    transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+button:hover{
+    background-color: rgb(116, 148, 174);
+    font-size: 1.25rem;
+    transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
