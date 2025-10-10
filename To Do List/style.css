@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    background-color: coral;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    border: none;
+    background-color: blueviolet;
+    padding: .5rem;
+    color: white;
+    border-radius: .5rem;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: hsl(271, 76%, 33%);
+}
+
+.inputs{
+    display: flex;
+    gap: 1rem;
+}
+
+li{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+li:hover{
+    cursor: pointer;
+}

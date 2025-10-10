@@ -4,15 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://web.dev/static/articles/building/an-adaptive-favicon/image/example-dark-theme-favico-6a6f6f67bc3e7.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
-    <h1>To Do</h1>
-    <div id="taskInputs">
-      <input type="text" id="task" />
-      <button id="taskSubmit">Add</button>
+    <div class="container">
+      <h1>To Do List</h1>
+      <p>With this program, you can create and delete items on a to-do list</p>
+      <div class="inputs">
+        <input id="taskText" type="text" />
+        <button id="taskCreateButton">Create Task</button>
+      </div>
+      <ul id="taskList"></ul>
+      <script src="script.js"></script>
     </div>
-    <ul id="taskList">
-    </ul>
-    <script src="script.js"></script>
   </body>
 </html>

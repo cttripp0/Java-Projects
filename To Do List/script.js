@@ -1,35 +1,35 @@
-const task = document.querySelector("#task");
-const taskList = document.querySelector("#taskList");
-const taskSubmit = document.querySelector("#taskSubmit");
-let removeButton;
+const taskList = document.getElementById("taskList");
+const taskInput = document.getElementById("taskText");
+const taskCreateButton = document.getElementById("taskCreateButton");
 
-function getTaskText() {
-  // Get value of input text
-  return task.value;
-}
+taskCreateButton.addEventListener("click", createTask);
 
-function createTask(text) {
-  // Creates list item, assigns list item text, and adds list item to the task list
-  const listItem = document.createElement("li");
-  listItem.innerText = text;
-  taskList.appendChild(listItem);
-
-  // Creates Remove button, assigns text to remove button, and adds the button within the list item
-  removeButton = document.createElement("button");
-  removeButton.innerText = "Remove Task";
-  listItem.appendChild(removeButton);
-}
-
-function removeTask() {
-  console.log(removeButton.parentElement);
-}
-
-taskSubmit.addEventListener("click", () => {
-  createTask(getTaskText());
+taskInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    createTask();
+  }
 });
 
-if (removeButton) {
-  removeButton.addEventListener("click", () => {
-    console.log(removeButton.parentElement);
-  });
+function createTask() {
+  if (taskInput.value !== "") {
+    taskText = taskInput.value;
+    const task = document.createElement("li");
+    task.innerHTML = `<p>${taskText}</p><button onclick="deleteTask(this)">Delete</button>`;
+    taskList.appendChild(task);
+    const p = task.querySelector("p");
+    task.addEventListener("click", () => strikeThrough(p));
+  }
+  taskInput.value = "";
+}
+
+function deleteTask(event) {
+  event.parentElement.remove();
+}
+
+function strikeThrough(event) {
+  if (event.style.textDecoration != "line-through")
+    event.style.textDecoration = "line-through";
+  else {
+    event.style.textDecoration = "none";
+  }
 }
