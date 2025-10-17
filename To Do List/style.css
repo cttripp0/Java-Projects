@@ -48,8 +48,14 @@ li{
     display: flex;
     gap: 2rem;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 li:hover{
     cursor: pointer;
+}
+
+li p:hover{
+ text-decoration: line-through;
 }
