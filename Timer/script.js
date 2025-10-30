@@ -5,7 +5,7 @@ const timeReset = document.getElementById("timeReset");
 
 let seconds = 0;
 let minutes = 0;
-let lastCount = parseInt(localStorage.getItem("seconds"));
+let lastCount = parseInt(localStorage.getItem("seconds")) || 0;
 let myTimer;
 
 minutesAmount.innerText = String(minutes).padStart(2, "0");
